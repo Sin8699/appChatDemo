@@ -1,13 +1,13 @@
 const express = require("express");
 const http = require("http");
 const socketIo = require("socket.io");
-const Port = 1212;
+const Port = process.env.PORT || 1212;
 
 var app = express();
 
 var server = http.Server(app);
 var io = socketIo(server);
-server.listen(1212, () => console.log("Server running in port " + Port));
+server.listen(Port, () => console.log("Server running in port " + Port));
 
 var arrListUserOnline = [];
 var arrListChat = [];
