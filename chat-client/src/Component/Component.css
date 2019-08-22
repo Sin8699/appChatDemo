@@ -1,0 +1,124 @@
+.Login {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.Login input {
+  text-indent: 10px;
+  height: 30px;
+}
+
+.Login button {
+  border: 0px;
+  width: 200px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background: darkcyan;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 50px auto;
+}
+
+/*                      CHAT                    */
+
+.Chat {
+  display: flex;
+  flex: 1;
+}
+
+.UserOnline {
+  width: 200px;
+  text-align: center;
+  background: bisque;
+  border: 1px solid black;
+}
+
+.UserOnline .header {
+  font-weight: 600;
+  font-size: 18px;
+  border-bottom: 1px solid black;
+  padding: 10px;
+}
+
+.ItemBroadChat {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.ItemBroadChat .name {
+  width: 60px;
+}
+.ItemBroadChat .mess {
+  flex: 1;
+  background: #c7eafc;
+  color: #6598ad;
+  padding: 10px 10px 20px 10px;
+  margin: 10px 0;
+  word-break: break-all;
+  text-align: left;
+}
+.ItemBroadChat .mess::before {
+  content: "";
+  position: absolute;
+  left: 40px;
+  border: 10px solid;
+  border-color: transparent #c7eafc transparent transparent;
+}
+
+.BroadChat {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.BroadChat form {
+  text-indent: 10px;
+  display: flex;
+  align-items: baseline;
+}
+
+.BroadChat form input {
+  padding: 5px;
+  flex: 1;
+  margin-left: 60px;
+  margin-top: 20px;
+  word-break: break-all;
+}
+
+.BroadChat form button {
+  border: 0;
+  background: #a3d063;
+  border-radius: 20px;
+  width: 100px;
+  height: 40px;
+  margin: 0 10px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.Logout {
+  float: right;
+  padding: 10px 20px;
+  margin: 10px;
+  background: #c4dafe;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.Logout img {
+  margin-left: 5px;
+  color: dimgray;
+  width: 0;
+  transition: 0.5s;
+}
+.Logout:hover img {
+  width: 20px;
+}
