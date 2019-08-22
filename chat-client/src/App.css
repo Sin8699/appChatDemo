@@ -1,0 +1,10 @@
+.App {
+  text-align: center;
+}
+
+.App .title {
+  font-weight: 800;
+  font-size: 25px;
+  color: red;
+  margin: 50px auto;
+}
