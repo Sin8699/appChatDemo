@@ -12,6 +12,9 @@ server.listen(Port, () => console.log("Server running in port " + Port));
 var arrListUserOnline = [];
 var arrListChat = [];
 
+app.use(express.static("chat-client"));
+app.set("chat-client", "./chat-client/public");
+
 io.on("connection", function(socket) {
   console.log(socket.id + " : connected");
   //socket.emit("id", socket.id);
@@ -58,5 +61,5 @@ io.on("connection", function(socket) {
 });
 
 app.get("/", (req, res) => {
-  res.render("./chat-client/public/index.html");
+  res.render("index");
 });
