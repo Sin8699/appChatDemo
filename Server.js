@@ -58,5 +58,5 @@ io.on("connection", function(socket) {
 });
 
 app.get("/", (req, res) => {
-  res.send("Home page. Server running okay.");
+  res.render("./chat-client/public/index.html");
 });
