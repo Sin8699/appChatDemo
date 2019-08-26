@@ -59,7 +59,7 @@ io.on("connection", function(socket) {
 });
 
 app.get("*", (req, res) => {
-  es.sendFile(path.join(__dirname + "/chat-client/build/index.html"));
+  res.sendFile(path.join(__dirname + "/chat-client/build/index.html"));
 });
 
 server.listen(Port, () => console.log("Server running in port " + Port));
