@@ -23,17 +23,9 @@ var App = () => {
       </div>
       <div
         class="fb-customerchat"
-        page_id="355737088702528"
+        page_id="116567869723905"
         theme_color="#0084ff"
       ></div>
-      {/* <div
-        class="fb-customerchat"
-        attribution="setup_tool"
-        page_id="355737088702528"
-        theme_color="#ffaf0d"
-        logged_in_greeting="Xin chào! Chúng tôi có thể giúp gì cho bạn?"
-        logged_out_greeting="Xin chào! Chúng tôi có thể giúp gì cho bạn?"
-      ></div> */}
     </Provider>
   );
 };
