@@ -21,11 +21,6 @@ var App = () => {
           <Route path="/Chat" component={() => <Chat history={history} />} />
         </Router>
       </div>
-      <div
-        class="fb-customerchat"
-        page_id="116567869723905"
-        theme_color="#0084ff"
-      ></div>
     </Provider>
   );
 };
