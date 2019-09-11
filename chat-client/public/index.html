@@ -22,7 +22,7 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-  <!-- <script>
+  <script>
     window.fbAsyncInit = function () {
       FB.init({
         appId: '707034936375371',
@@ -38,27 +38,7 @@
       js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
-  </script> -->
-  <script>
-    window.fbAsyncInit = function () {
-      FB.init({
-        appId: '418642985428562',
-        autoLogAppEvents: true,
-        xfbml: true,
-        version: 'v2.12'
-      });
-    };
-    (function (d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) { return; }
-      js = d.createElement(s); js.id = id;
-      js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
   </script>
-  <div class="fb-customerchat" attribution=setup_tool messenger_app_id="1247830488723834" page_id="355737088702528"
-    theme_color="#ffaf0d" logged_in_greeting="Xin chào! Chúng tôi có thể giúp gì cho bạn?"
-    logged_out_greeting="Xin chào! Chúng tôi có thể giúp gì cho bạn?"></div>
 </body>
 
 </html>
