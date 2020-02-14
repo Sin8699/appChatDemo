@@ -12,6 +12,7 @@ const history = createBrowserHistory();
 var store = createStore(reducer);
 
 var App = () => {
+  console.log(window.location);
   return (
     <Provider store={store}>
       <div className="App">
