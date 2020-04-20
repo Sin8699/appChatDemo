@@ -13,11 +13,11 @@ var arrListChat = [];
 
 app.use(express.static(path.join(__dirname, "chat-client/build")));
 
-io.on("connection", function(socket) {
+io.on("connection", function (socket) {
   console.log(socket.id + " : connected");
   //socket.emit("id", socket.id);
   //LOGIN
-  socket.on("Login", message => {
+  socket.on("Login", (message) => {
     let status = true;
     if (arrListUserOnline.includes(message)) status = false;
     console.log("Account login: " + message);
@@ -29,33 +29,38 @@ io.on("connection", function(socket) {
     //BROAD_CHAT
     io.sockets.emit("NewMess", arrListChat);
 
-    socket.on("AddMess", item => {
+    socket.on("AddMess", (item) => {
       console.log(item.name + " : " + item.mess);
       arrListChat = [...arrListChat, item];
       io.sockets.emit("NewMess", arrListChat);
     });
 
-    socket.on("Typing", name => {
+    socket.on("Typing", (name) => {
       console.log(name + " : " + "is typing");
       socket.broadcast.emit("HaveUserTyping", name);
     });
-    socket.on("StopType", name => {
+    socket.on("StopType", (name) => {
       console.log(name + " : " + "stopped typing");
       socket.broadcast.emit("StopTyping", name);
     });
   });
 
-  socket.on("Logout", name => {
+  socket.on("Logout", (name) => {
     console.log("Logout : " + name);
 
     //USER_ONLINE
-    arrListUserOnline = arrListUserOnline.filter(x => x !== name);
+    arrListUserOnline = arrListUserOnline.filter((x) => x !== name);
     io.sockets.emit("GetListUserOnline", arrListUserOnline);
   });
 
-  socket.on("disconnect", function() {
+  socket.on("disconnect", function () {
     console.log(socket.id + " : disconnect");
   });
+});
+const data = require("./step1.json");
+
+app.get("/step1-124", function (req, res) {
+  res.json(data);
 });
 
 app.get("*", (req, res) => {
