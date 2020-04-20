@@ -59,7 +59,7 @@ io.on("connection", function (socket) {
 });
 const data = require("./step1.json");
 
-app.get("/step1-124", function (req, res) {
+app.get("/step1-124.json", function (req, res) {
   res.json(data);
 });
 
